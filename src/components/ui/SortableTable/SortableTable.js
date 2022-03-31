@@ -49,6 +49,9 @@ const SortableTable = ({
 
   const handleSort = (e) => {
     const { value } = e.target;
+
+    if (!value) return;
+
     const type = e.target.selectedOptions[0].attributes["data-type"].value;
 
     setSortedField({ value, type });
@@ -73,7 +76,7 @@ const SortableTable = ({
         defaultValue={sortedField?.value}
         onChange={handleSort}
       >
-        <option>Sort by</option>
+        <option value="">Sort by</option>
         {columns.map((column, index) => (
           <option
             key={index}

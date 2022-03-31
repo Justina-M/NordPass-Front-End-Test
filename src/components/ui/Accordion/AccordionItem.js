@@ -16,22 +16,24 @@ const AccordionItem = ({ id, heading, content, collapse }) => {
   if (itemContent) {
     if (isCollapsed) {
       itemContent.style.height = 0;
-      itemContent.style.margin = 0;
+      itemContent.style.paddingBottom = 0;
     } else {
       itemContent.style.height = itemContent.scrollHeight + "px";
-      itemContent.style.marginTop = "1.6rem";
+      itemContent.style.paddingBottom = "1.6rem";
     }
   }
 
   return (
     <div className={`Accordion__item Accordion__item--${id}`}>
-      <div
+      <button
         className="Accordion__item-header flex space-between"
         onClick={handleExpand}
       >
         <div>{heading}</div>
-        <div>{isCollapsed ? <ChevronDown /> : <ChevronUp />}</div>
-      </div>
+        <div className="Accordion__chevron">
+          {isCollapsed ? <ChevronDown /> : <ChevronUp />}
+        </div>
+      </button>
       <div className="Accordion__item-content">
         <div dangerouslySetInnerHTML={{ __html: content }} />
       </div>
