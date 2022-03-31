@@ -1,0 +1,27 @@
+.Button {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-normal);
+  border: none;
+  border-radius: 3px;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: background 0.25s;
+
+  &:hover,
+  &:active {
+    background-color: var(--color-primary-alpha-70);
+    color: var(--color-white);
+  }
+
+  &:focus-visible {
+    outline: 1px solid var(--color-primary);
+    outline-offset: 5px;
+  }
+
+  &--large {
+    font-size: var(--font-size-medium);
+    padding: 1.2rem 2.4rem;
+  }
+}

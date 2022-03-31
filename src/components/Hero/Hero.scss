@@ -1,0 +1,23 @@
+@import "../../scss/mixins";
+
+.Hero {
+  padding: 12rem 0 2rem 0;
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-primary-alpha-15) 70%,
+    transparent
+  );
+
+  &__content {
+    margin-top: -5rem;
+
+    & h1 {
+      margin-bottom: 3rem;
+    }
+
+    @include lg {
+      margin: 0 0 5rem 0;
+      text-align: center;
+    }
+  }
+}

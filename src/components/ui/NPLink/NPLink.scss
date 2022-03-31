@@ -1,0 +1,33 @@
+.NPLink {
+  text-decoration: none;
+  color: var(--color-grey-darkest);
+  font-size: inherit;
+  font-weight: var(--font-weight-medium);
+  line-height: 2.4rem;
+  transition: color 0.25s;
+
+  &:hover,
+  &:active {
+    color: var(--color-primary);
+  }
+
+  &:focus-visible {
+    outline: 1px solid var(--color-primary);
+    outline-offset: 5px;
+  }
+
+  &--filled {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-weight: var(--font-weight-bold);
+    padding: 0.6rem 1.5rem;
+    border-radius: 2px;
+    transition: background 0.25s;
+
+    &:hover,
+    &:active {
+      color: var(--color-white);
+      background-color: var(--color-primary-alpha-70);
+    }
+  }
+}

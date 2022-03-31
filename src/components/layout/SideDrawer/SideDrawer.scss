@@ -1,0 +1,36 @@
+.SideDrawer {
+  background-color: var(--color-white);
+  height: 100vh;
+  padding: 2rem 4rem;
+
+  &__header {
+    border-bottom: 1px solid var(--color-grey-lighter);
+    padding-bottom: 1rem;
+  }
+
+  &--entering {
+    animation: slidein 0.25s ease-out;
+  }
+
+  &--exiting {
+    animation: sliedout 0.25s ease-out;
+  }
+
+  @keyframes slidein {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes sliedout {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@import "../../../scss/mixins";
+
+.SortableTable {
+  & table {
+    width: 100%;
+    border-spacing: 0;
+  }
+
+  & thead {
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-bold);
+    text-align: right;
+  }
+
+  & tbody {
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-light);
+    text-align: right;
+
+    & tr:hover {
+      background-color: var(--color-grey-lightest);
+    }
+  }
+
+  & th,
+  & td {
+    padding: 2.4rem 0;
+    border-bottom: 1px solid var(--color-grey-lighter);
+    color: var(--color-grey-darker);
+  }
+
+  & th:first-child {
+    text-align: left;
+  }
+
+  & td:first-child {
+    text-align: left;
+    color: var(--color-grey-dark);
+  }
+
+  & td:nth-child(2) {
+    font-weight: var(--font-weight-bold);
+    text-align: left;
+    color: var(--color-grey-dark);
+  }
+
+  &__sort-field {
+    width: 26rem;
+    padding: 0.7rem 1.5rem;
+    color: var(--color-grey-darker);
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-light);
+    border: 1px solid var(--color-grey-light);
+    border-radius: 3px;
+
+    @include sm {
+      width: 10rem;
+    }
+  }
+
+  &__row--enter {
+    opacity: 0;
+  }
+
+  &__row--enter-active {
+    opacity: 1;
+    transition: all 0.4s ease-in;
+  }
+
+  &__row--exit {
+    opacity: 1;
+  }
+
+  &__row--exit-active {
+    opacity: 0;
+    transition: all 0.4s ease-in;
+  }
+}
