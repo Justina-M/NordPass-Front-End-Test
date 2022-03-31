@@ -90,20 +90,20 @@
 // Typography
 .text-h1 {
   font-size: var(--font-size-largest);
-  font-weight: var(--font-weight-bold);
+  font-family: var(--font-bold);
   color: var(--color-black);
 }
 
 .text-h2 {
   font-size: var(--font-size-large);
-  font-weight: var(--font-weight-bold);
+  font-family: var(--font-bold);
   color: var(--color-grey-dark);
 }
 
 .text-h6 {
   text-transform: uppercase;
   font-size: var(--font-size-smaller);
-  font-weight: var(--font-weight-medium);
+  font-family: var(--font-medium);
   color: var(--color-grey-light);
 }
 
