@@ -1,6 +1,10 @@
 # NordPass Front-End Task
 
-This site was created as a Front-End test for NordPass [NordPass](https://nordpass.com/).
+This site was created as a Front-End test for [NordPass](https://nordpass.com/).
+
+## Live Demo
+
+Deployed on [Netlify](https://stellar-beijinho-401530.netlify.app/)
 
 ## The Task
 
